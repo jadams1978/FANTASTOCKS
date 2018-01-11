@@ -1,0 +1,41 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css', rel='stylesheet', media='screen')
+    link(rel='stylesheet', href='/stylesheets/nav.css')
+    link(rel='stylesheet', href='/stylesheets/newstyles.css')
+    //link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='https://code.jquery.com/jquery.js')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js')
+    script(src='https://fantasy-stock.herokuapp.com/fantasystock.js')
+    //script(src='http://localhost:3000/fantasystock.js')  
+  body
+    if (error && error.length > 0)
+      br
+      h4.error-msg= error
+      br
+
+    #myTopnav.topnav
+      
+      a(href='/' class="logo")  
+        p FANTASY#[span.glyphicon.glyphicon-usd]TOCK 
+      if (!user)
+        a(href="/login") Login
+        a(href="/register") Register
+      if (user)
+        a(href="/profile") #{user.username}
+      a.icon(href='javascript:void(0);', style='font-size:15px;', onclick='myFunction()') ☰
+  .container
+    block content
+
+    
+      
+
+    
+
+
+    
+
+     

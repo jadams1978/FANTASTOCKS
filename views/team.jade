@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  .team-container
+    p Choose your stocks. Pick as many as you like. You can add and drop stocks throughout the day during traditional market hours: 9:30am to 4:00pm.
+    h1 Team #{teamname}
+    p score #{score.toFixed(5)}
+
+  .stocksearch-container
+    form(role='form', action="",method="post")
+      .form-group
+        input#search.form-control(type='stock', placeholder="Search for a stock")
+        #results
+        
+
+  .stocks-table
+    table
+      thead
+        tr: th Team Stocks
+      tbody
+        each stock in stocks
+          tr
+            td.stock-name #{stock.name} 
+              button.drop(class="glyphicon glyphicon-minus" type="button" data-stockname= "#{stock.name}")
+          tr
+            td.stock-description #{stock.description}
+          
+
+  
+                
+    
+    
+            
+    
+
+            
+  
+    
+
+    
+  
+
+
+    
+
+    

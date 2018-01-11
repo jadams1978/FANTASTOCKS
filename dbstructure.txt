@@ -1,0 +1,86 @@
+users: [{
+    _id, 
+    username,
+    email,
+    password,
+    leagues: [
+        _id1,
+        _id2,...
+    ]
+},{...}]
+
+leagues: [{
+    _id,
+    name,
+    rankings: [...]
+    teams: [
+        teamid1,
+        teamid2,...
+
+    ],
+    schedule: [
+        {
+            week:1,
+            games: [
+                {
+                    name:game1,
+                    winner:patriots,
+                    date:oct.28th
+                    matchups:[
+                        {
+                            team:patriots, score:57
+                        },
+                        {
+                            team:colts, score:2
+                        },
+                        {...}
+                    ]
+                    
+                },
+               {...} 
+            ]
+        },
+        {...}
+    ]
+},{...}]
+
+stocks: [{
+    ...
+}]
+teams: [{
+    _id,
+    teamowner,
+    teamname: [
+        stock1,
+        stock2,...
+    ]
+    games:[{
+        oppenent:patriots,
+        outcome:loss
+    }
+
+    ]
+Teams.find({'teammates':id"})
+calculate the score
+},{...}]
+
+views: home-youll see all leagues, 
+profile- youll see your leagues,
+league- youll see all stocks and teams/your teams
+
+mlab
+heroku
+//show all leagues
+//add ownername next to team
+//add ownername next to league
+//add teams to team array in league
+each user can only have one team in each league
+
+pick winner:
+    calculate scores at end of each day,
+    pair teams,
+    compare scores,
+    add win or loss to team,
+
+end of season:
+    standings

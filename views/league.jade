@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  .league-container
+    p This is the league page which shows all teams in the league and the matchup schedule. If your league hasn't started, wait for all members to create their teams and then hit the "start league" button and a schedule will be generated.
+    h1 #{league_name}
+
+  .league-container
+    if !started 
+      form(role='form', action="",method="post")
+        .form-group
+          input.form-control(type='text', name="teamname", placeholder='Create Team', leagueId='#{leagueId}')
+        button.btn.btn-default(type='submit') Submit
+        &nbsp;
+        a(href='/')
+          button.btn.btn-primary(type="button") Cancel
+
+    
+      button.btn.btn-default.schedule(type='submit') Start League
+      
+        
+  .teams-table
+    table
+      thead
+        tr: th Teams
+      tbody
+        each team in teams
+          tr
+            td 
+              a(href="/team/"+team._id) #{team.teamname} 
+              i #{team.teamOwner}
+  .schedule-table
+    table
+      each week in schedule
+        thead
+          tr: th Day: #{week.week} #{moment(week.date).format("dddd MMM Do")}
+        tbody
+          each game in week.games
+            tr
+              td 
+                p Matchups
+                each matchup in game.matchups 
+                  span #{matchup.team.teamname} #{matchup.team.score.toFixed(3)}
+  
+      
+ 

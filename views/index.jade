@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .home-container
+    p To view the "demo" league click on the league below.  Then click on submit with the "demo" credentials already populated.
+  
+  .leagues-table
+    table
+      thead
+        tr: th Leagues
+      tbody
+        each league in leagues
+          tr
+            td 
+              a(href="/league/"+league._id) #{league.leaguename} 
+              i #{league.leagueOwner} 
+    
+      

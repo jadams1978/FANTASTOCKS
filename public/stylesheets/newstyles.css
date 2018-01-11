@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+* {
+    box-sizing: border-box;
+}   
+
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("../images/nystockexchange.jpeg");
+    background-repeat: no-repeat;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(33, 32, 2, 0.44);
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    
+  }
+  .container {
+    margin-top: 30px;
+  }
+  a {
+    color: #8fb59c;
+  }
+  h1, .schedule-container li {
+    font-weight: bold;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: -65px;
+  }
+  i {
+    font-size: 12px;
+    color: #d94c3a;
+  }
+  .stock-name, .stock-description, .leagues-table td, .teams-table td, .schedule-table td, .stocks-table td {
+    padding: 5px 0 0 0;
+  }
+  
+  #results {
+    margin-top: -35px;
+    
+  }
+  .row {
+    padding: 0 5px 0 5px;
+  }
+  .home-container, .register-container, .login-container, .profile-container, .leagues-table, .league-container, .teams-table, .team-container, .stocks-table, .schedule-table, .stocksearch-container, .stock {
+    padding: 0 10px 0 10px;
+    color: white;
+    line-height: 1.5;
+    font-weight: bold;
+  }
+  .stock {
+    max-width: 350px;
+  }
+  td.stock-name, td.stock-description, #search, .form-control {
+    max-width: 330px;
+  }
+  
+  .team-container p {
+    color: white;
+    
+    
+  }
+  .schedule-container {
+    margin-top: 30px;
+    padding: 10px;
+    line-height: 1.5;
+  }
+  .schedule-table span {
+    color: white;
+  }
+  .schedule-table span:last-child:before {
+    content: " vs ";
+    color: #e8c571;
+    
+  }
+  li {
+    list-style-type: none;
+  }
+  .stock-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: bold;
+    
+  }
+  #search {
+    margin-bottom: 40px;
+  }
+  .stock-description {
+    font-style: italic;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    
+  }
+  .schedule {
+    margin-top: 10px;
+  }
+  th, h1 {
+    font-size: 24px;
+  }
+  .glyphicon-plus {
+    float: right;
+    color: blue;
+    font-size: 20px;
+  }
+  .glyphicon-minus {
+    float: right;
+    color: red;
+    font-size: 20px;  
+  }
+  
+  
+
+@media screen and (min-width: 640px) {
+  
+  .container {
+    
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .stock {
+    max-width: 524px;
+  }
+  td.stock-name, td.stock-description, #search, .form-control {
+    min-width: 500px;
+  }
+  
+}
