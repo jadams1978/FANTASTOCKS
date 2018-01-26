@@ -2,7 +2,7 @@ extends layout
 
 block content
   .league-container
-    p This is the league page which shows all teams in the league and the matchup schedule. If your league hasn't started, wait for all members to create their teams and then hit the "start league" button and a schedule will be generated.
+    p Click "Start League" when all teams have joined league
     h1 #{league_name}
 
   .league-container
@@ -38,7 +38,6 @@ block content
           each game in week.games
             tr
               td 
-                p Matchups
                 each matchup in game.matchups 
                   span #{matchup.team.teamname} #{matchup.team.score.toFixed(3)}
   

@@ -2,9 +2,9 @@ extends layout
 
 block content
   .team-container
-    p Choose your stocks. Pick as many as you like. You can add and drop stocks throughout the day during traditional market hours: 9:30am to 4:00pm.
-    h1 Team #{teamname}
-    p score #{score.toFixed(5)}
+    p Choose your stocks
+    h1 #{teamname}
+    span score #{score.toFixed(5)}
 
   .stocksearch-container
     form(role='form', action="",method="post")
@@ -16,13 +16,13 @@ block content
   .stocks-table
     table
       thead
-        tr: th Team Stocks
+        tr: th Stocks:
       tbody
         each stock in stocks
           tr
             td.stock-name #{stock.name} 
               button.drop(class="glyphicon glyphicon-minus" type="button" data-stockname= "#{stock.name}")
-          tr
+          //tr
             td.stock-description #{stock.description}
           
 
